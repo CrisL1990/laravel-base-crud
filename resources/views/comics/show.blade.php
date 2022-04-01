@@ -10,7 +10,7 @@
         <div><img src="{{$test->thumb}}" alt=""></div>
         <div><strong>Prezzo</strong>{{$test->price}}</div>
 
-        <a class="btn btn-primary" href="{{route('comics.index')}}" role="button">Torna alla lista</a>
+        <a class="btn btn-primary" href="{{route('test.index')}}" role="button">Torna alla lista</a>
 
 
     </div>
