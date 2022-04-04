@@ -37,7 +37,6 @@ class mioController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-
         $comic = new Comic();
 
         $comic->fill($data);
@@ -63,9 +62,9 @@ class mioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $test)
     {
-        //
+        return view('comics.edit', compact('test'));
     }
 
     /**
@@ -75,9 +74,14 @@ class mioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $test)
     {
-        //
+        $data = $request->all();
+        
+        $test->update($data);
+        $test->save();
+
+        return redirect()->route('test.show',[$test->id]);
     }
 
     /**

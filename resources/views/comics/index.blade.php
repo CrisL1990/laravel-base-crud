@@ -42,6 +42,9 @@
                         <td>
                             <a class="btn btn-primary" href="{{route('test.show', $comic->id)}}" role="button">Vedi</a>
                         </td>
+                        <td>
+                            <a class="btn btn-primary" href="{{route('test.edit', $comic->id)}}" role="button">Modifica</a>
+                        </td>
                         
                         
 
