@@ -45,10 +45,20 @@
                         <td>
                             <a class="btn btn-primary" href="{{route('test.edit', $comic->id)}}" role="button">Modifica</a>
                         </td>
-                        
-                        
 
+                        <td>
+                            <form action="{{route('test.destroy', ['test' => $comic->id])}}"
+                            method="post">
+                                @csrf
+                                @method('DELETE')
+
+                                <button class="btn btn-danger" type="submit" name="delete">Elimina</button>
+                            </form>
+                        </td>
                     </tr>
+
+                    
+                   
                 @endforeach
                 
 
