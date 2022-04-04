@@ -36,6 +36,19 @@ class mioController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'title'=> 'Required|String',
+                'description'=> 'Required|String|max:255',
+                'thumb'=> 'Required|URL',
+                'price'=> 'Required|Numeric',
+                'series'=> 'Required|String',
+                'sale_date'=> 'Required|Date',
+                'type'=> 'Required|String'
+            ]
+
+        );
+
         $data = $request->all();
         $comic = new Comic();
 
@@ -76,6 +89,19 @@ class mioController extends Controller
      */
     public function update(Request $request, Comic $test)
     {
+
+        $request->validate(
+            [
+                'title'=> 'Required|String',
+                'description'=> 'Required|String|max:255',
+                'thumb'=> 'Required|URL',
+                'price'=> 'Required|Digits',
+                'series'=> 'Required|String',
+                'sale_date'=> 'Required|Date',
+                'type'=> 'Required|String'
+            ]
+
+        );
         $data = $request->all();
         
         $test->update($data);

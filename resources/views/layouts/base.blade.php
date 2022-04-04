@@ -8,9 +8,21 @@
     <title>@yield('pageTitle')</title>
 </head>
 <body>
+    
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     @yield('content')
 
     <div class="container-secondo">
+        
         <script src="{{asset('js/app.js')}}"></script>
     </div>
 
