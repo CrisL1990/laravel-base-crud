@@ -8,6 +8,9 @@
 <table class="table">
 
     <div class="container">
+        
+        <a class="btn btn-primary" href="{{route('test.create')}}" role="button">Crea Nuovo</a>
+        
         <thead>
             <tr>
                 <th scope="col">Id</th> 
@@ -20,7 +23,7 @@
                 <th scope="col">Genere</th>
                 <th scope="col">Azioni</th>
                 
-
+                
 
             </tr>
           </thead>
@@ -39,6 +42,7 @@
                         <td>
                             <a class="btn btn-primary" href="{{route('test.show', $comic->id)}}" role="button">Vedi</a>
                         </td>
+                        
                         
 
                     </tr>

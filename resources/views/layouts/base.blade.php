@@ -10,6 +10,10 @@
 <body>
     @yield('content')
 
-    <script src="{{asset('js/app.js')}}"></script>
+    <div class="container">
+        <script src="{{asset('js/app.js')}}"></script>
+    </div>
+
+    
 </body>
 </html>

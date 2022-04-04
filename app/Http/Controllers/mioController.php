@@ -36,7 +36,14 @@ class mioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $comic = new Comic();
+
+        $comic->fill($data);
+        $comic->save();
+
+        return redirect()->route('test.show',['test'=>$comic->id]);
     }
 
     /**
