@@ -52,12 +52,11 @@
                                 @csrf
                                 @method('DELETE')
 
-                                <button class="btn btn-danger" type="submit" name="delete">Elimina</button>
+                                <button onclick="javascript:return confirm('Sei sicuro di voler eliminare questo elemento?')" class="btn btn-danger" type="submit" name="delete">Elimina</button>
                             </form>
                         </td>
                     </tr>
 
-                    
                    
                 @endforeach
                 

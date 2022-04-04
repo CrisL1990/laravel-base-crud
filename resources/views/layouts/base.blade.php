@@ -8,7 +8,7 @@
     <title>@yield('pageTitle')</title>
 </head>
 <body>
-    
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -24,6 +24,8 @@
     <div class="container-secondo">
         
         <script src="{{asset('js/app.js')}}"></script>
+        
+        
     </div>
 
     
