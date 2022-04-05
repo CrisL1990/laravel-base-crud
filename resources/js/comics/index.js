@@ -1,5 +1,5 @@
 
-let prova = document.getElementsByClassName("prova")
+let prova = document.getElementsByClassName("del_element")
 
 
 for(let i = 0; i < prova.length; i++){
@@ -8,7 +8,7 @@ for(let i = 0; i < prova.length; i++){
 
 
 function provaFunction(){
-    if(!confirm('sei bla bla bla')){
+    if(!confirm('Sei sicuro di voler cancellare irreversibilmente questo elemento?')){
         event.preventDefault()
     }
 

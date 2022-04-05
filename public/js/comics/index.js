@@ -93,14 +93,14 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var prova = document.getElementsByClassName("prova");
+var prova = document.getElementsByClassName("del_element");
 
 for (var i = 0; i < prova.length; i++) {
   prova[i].addEventListener('click', provaFunction);
 }
 
 function provaFunction() {
-  if (!confirm('sei bla bla bla')) {
+  if (!confirm('Sei sicuro di voler cancellare irreversibilmente questo elemento?')) {
     event.preventDefault();
   }
 }
