@@ -40,7 +40,7 @@
                         <td>{{$comic->sale_date}}</td>
                         <td>{{$comic->type}}</td>
                         <td>
-                            <a class="btn btn-primary" href="{{route('test.show', $comic->id)}}" role="button">Vedi</a>
+                            <a class="btn btn-primary" href="{{route('test.show', $comic->id)}}" role="button" id="prova">Vedi</a>
                         </td>
                         <td>
                             <a class="btn btn-primary" href="{{route('test.edit', $comic->id)}}" role="button">Modifica</a>
@@ -60,9 +60,10 @@
                    
                 @endforeach
                 
-
+                <script src="{{asset('js/comics/index.js')}}"></script>
           </tbody>
         </table>
+        
     </div>
     
 
