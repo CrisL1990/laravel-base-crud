@@ -1,9 +1,19 @@
 
+let prova = document.getElementsByClassName("prova")
 
 
-
-function myFunction(){
-    alert('CIAO');
+for(let i = 0; i < prova.length; i++){
+    prova[i].addEventListener('click', provaFunction)
 }
 
-myFunction();
+
+function provaFunction(){
+    if(!confirm('sei bla bla bla')){
+        event.preventDefault()
+    }
+
+
+    
+}
+
+

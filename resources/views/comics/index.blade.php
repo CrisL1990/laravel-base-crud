@@ -40,7 +40,7 @@
                         <td>{{$comic->sale_date}}</td>
                         <td>{{$comic->type}}</td>
                         <td>
-                            <a class="btn btn-primary" href="{{route('test.show', $comic->id)}}" role="button" id="prova">Vedi</a>
+                            <a class="btn btn-primary" href="{{route('test.show', $comic->id)}}" role="button">Vedi</a>
                         </td>
                         <td>
                             <a class="btn btn-primary" href="{{route('test.edit', $comic->id)}}" role="button">Modifica</a>
@@ -52,7 +52,7 @@
                                 @csrf
                                 @method('DELETE')
 
-                                <button onclick="javascript:return confirm('Sei sicuro di voler eliminare questo elemento?')" class="btn btn-danger" type="submit" name="delete">Elimina</button>
+                                <button class="btn btn-danger prova" type="submit" name="delete">Elimina</button>
                             </form>
                         </td>
                     </tr>
@@ -69,3 +69,4 @@
 
 @endsection
     
+<!--onclick="javascript:return confirm('Sei sicuro di voler eliminare questo elemento?')"-->

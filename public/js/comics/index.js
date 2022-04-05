@@ -93,7 +93,17 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var prova = document.getElementsByClassName("prova");
 
+for (var i = 0; i < prova.length; i++) {
+  prova[i].addEventListener('click', provaFunction);
+}
+
+function provaFunction() {
+  if (!confirm('sei bla bla bla')) {
+    event.preventDefault();
+  }
+}
 
 /***/ }),
 
