@@ -93,10 +93,10 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var prova = document.getElementsByClassName("del_element");
+var del_element = document.getElementsByClassName("del_element");
 
-for (var i = 0; i < prova.length; i++) {
-  prova[i].addEventListener('click', provaFunction);
+for (var i = 0; i < del_element.length; i++) {
+  del_element[i].addEventListener('click', provaFunction);
 }
 
 function provaFunction() {

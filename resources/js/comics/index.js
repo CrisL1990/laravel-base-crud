@@ -1,9 +1,9 @@
 
-let prova = document.getElementsByClassName("del_element")
+let del_element = document.getElementsByClassName("del_element")
 
 
-for(let i = 0; i < prova.length; i++){
-    prova[i].addEventListener('click', provaFunction)
+for(let i = 0; i < del_element.length; i++){
+    del_element[i].addEventListener('click', provaFunction)
 }
 
 
